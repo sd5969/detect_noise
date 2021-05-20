@@ -7,7 +7,8 @@ User=root
 Group=root
 Restart=always
 KillSignal=SIGQUIT
-ExecStart=/home/pi/workspace/detect_noise_level.sh
+WorkingDirectory=/home/pi/scripts/detect_noise
+ExecStart=/home/pi/scripts/detect_noise/detect_noise_level.sh
 
 [Install]
 WantedBy=multi-user.target
