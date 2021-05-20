@@ -1,0 +1,13 @@
+[Unit]
+Description=Noise Detector
+
+[Service]
+PIDFile=/var/run/detect-noise-99.pid
+User=root
+Group=root
+Restart=always
+KillSignal=SIGQUIT
+ExecStart=/home/pi/workspace/detect_noise_level.sh
+
+[Install]
+WantedBy=multi-user.target
