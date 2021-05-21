@@ -2,6 +2,7 @@ Simple script for detecting noise level. Uses `sox` with USB microphone set to `
 
 # Installation
 
+1. Clone repository to `/home/pi/scripts/detect_noise`
 1. Install dependencies
 2. Update permissions `chmod u+x detect_noise_level.sh`
 3. Run `make install` after all dependencies are installed
