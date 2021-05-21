@@ -18,6 +18,12 @@ sensor:
     resource: http://10.0.0.161:1111/noise.html
     select: "span"
     name: "AC Noise"
+  - platform: template
+    sensors:
+      ac_noise_bool:
+        name: "AC Noise (Boolean)"
+        value_template: "{{ states('sensor.ac_noise') | float > 1.5 }}"
+
 ```
 
 Replace `10.0.0.161` with the IP/hostname for where you have the detect_noise scripts running. Must be on the same network.
