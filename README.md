@@ -2,4 +2,10 @@ Simple script for detecting noise level. Uses `sox` with USB microphone set to `
 
 # Installation
 
-Run `make install` after all dependencies are installed. This creates two services, `detect_noise` and `detect_noise_api`. Control with `systemd`. 
+1. Install dependencies
+2. Update permissions `chmod u+x detect_noise_level.sh`
+3. Run `make install` after all dependencies are installed
+
+This creates two services, `detect_noise` and `detect_noise_api`. Control with `systemd`.
+
+# Home Assistant Sensor
