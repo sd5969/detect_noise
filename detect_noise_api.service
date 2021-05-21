@@ -1,0 +1,14 @@
+[Unit]
+Description=Noise Detector API
+
+[Service]
+PIDFile=/var/run/detect-noise-api-99.pid
+User=root
+Group=root
+Restart=always
+KillSignal=SIGQUIT
+WorkingDirectory=/home/pi/scripts/detect_noise
+ExecStart=http-server -p 1111 -c-1 /home/pi/scripts/detect_noise/public
+
+[Install]
+WantedBy=multi-user.target
