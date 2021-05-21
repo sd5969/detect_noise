@@ -9,3 +9,15 @@ Simple script for detecting noise level. Uses `sox` with USB microphone set to `
 This creates two services, `detect_noise` and `detect_noise_api`. Control with `systemd`.
 
 # Home Assistant Sensor
+
+Add this to your `configuration.yaml`:
+
+```
+sensor:
+  - platform: scrape
+    resource: http://10.0.0.161:1111/noise.html
+    select: "span"
+    name: "AC Noise"
+```
+
+Replace `10.0.0.161` with the IP/hostname for where you have the detect_noise scripts running. Must be on the same network.
