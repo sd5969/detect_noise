@@ -1,4 +1,4 @@
-Simple script for detecting noise level. Uses `sox` with USB microphone set to `card 1, device 0`. Needs `alsa-utils`, `node` and `http-server` npm library.
+Simple script for detecting noise level. Uses `sox` with USB microphone set to `card 1, device 0`. Needs `alsa-utils`, `node`, `sox`, and `http-server` npm library.
 
 # Installation
 
